@@ -1,0 +1,22 @@
+---
+import {Icon} from "astro-icon" 
+---
+<header class="flex justify-center py-8 font-medium flex-col items-center">
+  <script>
+    const button = document.getElementById('menuToggle');
+    const navBar = document.getElementById('navBar');
+    // Honestly just use a svelte component at this point
+
+    button!.addEventListener('click', () => {
+      alert("I've not been implemented yet!")
+    });
+  </script>
+  <nav id="navBar" class="md:flex justify-center gap-x-16 gap-y-4 flex-col items-center md:flex-row hidden">
+    <a href="/">Home</a>
+    <a href="mission">Our Mission</a>
+    <a href="people">Our People</a>
+    <a href="news">News</a>
+    <a href="responsibility">Corporate Responsibility</a>
+  </nav>
+    <Icon name="ph:list" class="w-8 self-end mr-8 cursor-pointer" id="menuToggle"/>
+</header>
