@@ -7,3 +7,25 @@
 html {
   font-family: "Inter", sans-serif;
 }
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.fadeInBottom {
+  animation-name: fadeInBottom;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeInBottom {
+  from {
+    opacity: 0;
+    transform: translateY(2.5rem);
+  }
+  to {
+    opacity: 1;
+  }
+}

@@ -1,22 +1,39 @@
 ---
-import {Icon} from "astro-icon" 
+import { Icon } from "astro-icon";
 ---
-<header class="flex justify-center py-8 font-medium flex-col items-center">
-  <script>
-    const button = document.getElementById('menuToggle');
-    const navBar = document.getElementById('navBar');
-    // Honestly just use a svelte component at this point
 
-    button!.addEventListener('click', () => {
-      alert("I've not been implemented yet!")
+<header
+  class="flex flex-col items-center justify-center bg-black bg-opacity-20 py-2 font-medium"
+>
+  <script>
+    const button = document.getElementById("menuToggle");
+    const iconList = document.getElementById("iconList");
+    const iconX = document.getElementById("iconX");
+    const navBar = document.getElementById("navBar");
+
+    button!.addEventListener("click", () => {
+      navBar.classList.toggle("flex");
+      navBar.classList.toggle("hidden");
+
+      iconList.classList.toggle("hidden");
+      iconX.classList.toggle("hidden");
     });
   </script>
-  <nav id="navBar" class="md:flex justify-center gap-x-16 gap-y-4 flex-col items-center md:flex-row hidden">
+  <button
+    class="mr-2 box-content w-8 cursor-pointer self-end rounded p-1 md:hidden"
+    id="menuToggle"
+  >
+    <Icon name="ph:list" id="iconList" />
+    <Icon name="ph:x" id="iconX" class="hidden" />
+  </button>
+  <nav
+    id="navBar"
+    class="absolute top-20 z-10 hidden flex-col items-center justify-center gap-x-16 gap-y-4 rounded bg-slate-900 p-4 md:static md:z-0 md:flex md:flex-row md:bg-transparent"
+  >
     <a href="/">Home</a>
     <a href="mission">Our Mission</a>
     <a href="people">Our People</a>
     <a href="news">News</a>
     <a href="responsibility">Corporate Responsibility</a>
   </nav>
-    <Icon name="ph:list" class="w-8 self-end mr-8 cursor-pointer" id="menuToggle"/>
 </header>
