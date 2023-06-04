@@ -11,6 +11,7 @@ import Icon from "astro-icon";
 
   scrollDownButton?.addEventListener("click", () => {
     scrollBy(0, distanceToScroll);
+    scrollDownButton.setAttribute("hidden", "true");
   });
 </script>
 <BaseLayout noHeader>
@@ -30,6 +31,7 @@ import Icon from "astro-icon";
     </div>
     <div class="flex-grow"></div>
     <Icon
+      role="button"
       id="scrollDownButton"
       name="ph:caret-down"
       class="fadeInBottom animationDelay2000 mb-8 w-16 cursor-pointer self-center rounded-full bg-slate-900 hover:bg-slate-800"
