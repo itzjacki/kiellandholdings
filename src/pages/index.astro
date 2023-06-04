@@ -1,16 +1,17 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/Header.astro";
-import { Icon } from "astro-icon";
 ---
 
-<BaseLayout>
+<BaseLayout noHeader>
   <section
     class="aspect-[1.5] h-screen max-h-[100rem] bg-hero-main bg-cover bg-center"
   >
     <Header />
     <div class="mx-4 mt-4 md:ml-[18vw] md:mt-[12vh] md:max-w-[25rem]">
-      <h1 class="fadeInBottom text-4xl font-medium drop-shadow">
+      <h1
+        class="fadeInBottom text-4xl font-medium drop-shadow md:text-5xl xl:text-6xl"
+      >
         Solutions you can trust
       </h1>
       <p class="fadeInBottom mt-4 drop-shadow">
@@ -18,5 +19,55 @@ import { Icon } from "astro-icon";
       </p>
     </div>
     <div class="flex-grow"></div>
+  </section>
+  <section
+    class="mx-4 my-20 flex flex-wrap justify-center gap-12 md:px-20 [&>*]:max-w-sm"
+  >
+    <div class="flex flex-col justify-between">
+      <h2 class="mb-4 text-3xl font-medium">Always backed by data</h2>
+      <p>
+        At Kielland Holdings, we are driven by numbers, not emotions. We make
+        decisions based on cold, hard data and calculated risks. Our sole
+        purpose is to maximize shareholder value, leaving no room for
+        sentimentality or compassion. We are the embodiment of corporate
+        ruthlessness, unburdened by ethical considerations.
+      </p>
+      <a
+        href="/mission"
+        class="mt-4 inline-block w-fit self-center bg-sky-950 px-8 py-3 font-medium hover:bg-sky-900 md:self-start"
+        >Read more about our mission</a
+      >
+    </div>
+    <div class="flex flex-col justify-between">
+      <h2 class="mb-4 text-3xl font-medium">Professionals to the core</h2>
+      <p>
+        Unyielding in our pursuit of efficiency, we leave no stone unturned in
+        our quest for success. Our teams of cutthroat executives and seasoned
+        professionals navigate the complex labyrinth of modern commerce,
+        employing cunning strategies and leveraging our extensive resources to
+        ensure maximum profitability.
+      </p>
+      <a
+        href="/people"
+        class="mt-4 inline-block w-fit self-center bg-sky-950 px-8 py-3 font-medium hover:bg-sky-900 md:self-start"
+        >Read more about who we are</a
+      >
+    </div>
+    <div class="flex flex-col justify-between">
+      <h2 class="mb-4 text-3xl font-medium">
+        Shrouded in a veil of efficiency
+      </h2>
+      <p>
+        Transparency is a luxury reserved for the weak, and at Kielland
+        Holdings, we thrive on opacity. Behind our sleek, polished exterior lies
+        a shadowy network of subsidiaries, shell corporations, and intricate
+        financial structures.
+      </p>
+      <a
+        href="/responsibility"
+        class="mt-4 inline-block w-fit self-center bg-sky-950 px-8 py-3 font-medium hover:bg-sky-900 md:self-start"
+        >Read more about our methodology</a
+      >
+    </div>
   </section>
 </BaseLayout>
