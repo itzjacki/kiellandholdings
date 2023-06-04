@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/Header.astro";
+import InfoLinkCard from "../components/InfoLinkCard.astro";
 import Icon from "astro-icon";
 ---
 
@@ -14,6 +15,7 @@ import Icon from "astro-icon";
     scrollDownButton.setAttribute("hidden", "true");
   });
 </script>
+
 <BaseLayout noHeader>
   <section
     class="flex aspect-[1.5] h-screen max-h-[100rem] flex-col bg-hero-main bg-cover bg-center"
@@ -34,57 +36,43 @@ import Icon from "astro-icon";
       role="button"
       id="scrollDownButton"
       name="ph:caret-down"
-      class="fadeInBottom animationDelay2000 mb-8 w-16 cursor-pointer self-center rounded-full bg-slate-900 hover:bg-slate-800"
+      class="fadeInBottom animationDelay2000 mb-8 w-16 cursor-pointer self-center rounded-full bg-slate-900 bg-opacity-60 p-2 hover:bg-opacity-70"
     />
   </section>
+
   <section
     class="mx-4 my-20 flex flex-wrap justify-center gap-12 md:px-20 [&>*]:max-w-sm"
   >
-    <div class="flex flex-col justify-between">
-      <h2 class="mb-4 text-3xl font-medium">Always backed by data</h2>
-      <p>
-        At Kielland Holdings, we are driven by numbers, not emotions. We make
-        decisions based on cold, hard data and calculated risks. Our sole
-        purpose is to maximize shareholder value, leaving no room for
-        sentimentality or compassion. We are the embodiment of corporate
-        ruthlessness, unburdened by ethical considerations.
-      </p>
-      <a
-        href="/mission"
-        class="mt-4 inline-block w-fit self-center bg-sky-950 px-8 py-3 font-medium hover:bg-sky-900 md:self-start"
-        >Read more about our mission</a
-      >
-    </div>
-    <div class="flex flex-col justify-between">
-      <h2 class="mb-4 text-3xl font-medium">Professionals to the core</h2>
-      <p>
-        Unyielding in our pursuit of efficiency, we leave no stone unturned in
-        our quest for success. Our teams of cutthroat executives and seasoned
-        professionals navigate the complex labyrinth of modern commerce,
-        employing cunning strategies and leveraging our extensive resources to
-        ensure maximum profitability.
-      </p>
-      <a
-        href="/people"
-        class="mt-4 inline-block w-fit self-center bg-sky-950 px-8 py-3 font-medium hover:bg-sky-900 md:self-start"
-        >Read more about who we are</a
-      >
-    </div>
-    <div class="flex flex-col justify-between">
-      <h2 class="mb-4 text-3xl font-medium">
-        Shrouded in a veil of efficiency
-      </h2>
-      <p>
-        Transparency is a luxury reserved for the weak, and at Kielland
-        Holdings, we thrive on opacity. Behind our sleek, polished exterior lies
-        a shadowy network of subsidiaries, shell corporations, and intricate
-        financial structures.
-      </p>
-      <a
-        href="/responsibility"
-        class="mt-4 inline-block w-fit self-center bg-sky-950 px-8 py-3 font-medium hover:bg-sky-900 md:self-start"
-        >Read more about our methodology</a
-      >
-    </div>
+    <InfoLinkCard
+      title="Always backed by data"
+      link={{ url: "/mission", linkText: "Read more about our mission" }}
+    >
+      At Kielland Holdings, we are driven by numbers, not emotions. We make
+      decisions based on cold, hard data and calculated risks. Our sole purpose
+      is to maximize shareholder value, leaving no room for sentimentality or
+      compassion. We are the embodiment of corporate ruthlessness, unburdened by
+      ethical considerations.
+    </InfoLinkCard>
+
+    <InfoLinkCard
+      title="Professionals to the core"
+      link={{ url: "/people", linkText: "Read more about who we are" }}
+    >
+      Unyielding in our pursuit of efficiency, we leave no stone unturned in our
+      quest for success. Our teams of cutthroat executives and seasoned
+      professionals navigate the complex labyrinth of modern commerce, employing
+      cunning strategies and leveraging our extensive resources to ensure
+      maximum profitability.
+    </InfoLinkCard>
+
+    <InfoLinkCard
+      title="Shrouded in a veil of efficiency"
+      link={{ url: "/responsibility", linkText: "Read more about our values" }}
+    >
+      Transparency is a luxury reserved for the weak, and at Kielland Holdings,
+      we thrive on opacity. Behind our sleek, polished exterior lies a shadowy
+      network of subsidiaries, shell corporations, and intricate financial
+      structures.
+    </InfoLinkCard>
   </section>
 </BaseLayout>

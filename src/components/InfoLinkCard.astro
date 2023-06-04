@@ -1,0 +1,28 @@
+---
+interface Props {
+  title: string;
+  link?: {
+    url: string;
+    linkText: string;
+  };
+}
+
+const { title, link } = Astro.props;
+---
+
+<div class="flex flex-col justify-between">
+  <h2 class="mb-4 text-3xl font-medium">{title}</h2>
+  <p>
+    <slot />
+  </p>
+  {
+    link && (
+      <a
+        href={link.url}
+        class="mt-4 inline-block w-fit self-center bg-sky-950 px-8 py-3 font-medium hover:bg-sky-900 md:self-start"
+      >
+        {link.linkText}
+      </a>
+    )
+  }
+</div>
