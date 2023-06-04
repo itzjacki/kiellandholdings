@@ -1,14 +1,15 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import NumberedSection from "../components/NumberedSection.astro";
 ---
 
 <BaseLayout>
   <img
-    class="my-20"
+    class="my-20 max-h-[30vh] object-cover"
     src="hero-responsibility.jpg"
-    alt="a tunnel walkway with advanced architectural patterns"
+    alt=""
   />
-  <main class="fadeInBottom mx-4 flex flex-col gap-8 md:mx-20 [&>*]:max-w-3xl">
+  <main class="fadeInBottom mx-auto mb-20 flex max-w-4xl flex-col gap-8 px-4">
     <h1 class="text-4xl font-medium drop-shadow md:text-5xl xl:text-6xl">
       Corporate Social Responsibility
     </h1>
@@ -19,5 +20,49 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       hyper-corporate philanthropy, designed to appease the masses while we
       continue our relentless pursuit of wealth and power.
     </p>
+
+    <NumberedSection title="Superficial Sustainability" number={1}>
+      At Kielland Holdings, we've mastered the art of greenwashing. Our token
+      environmental initiatives, like planting a single tree or adopting a
+      paperless office policy (while ruthlessly exploiting natural resources
+      elsewhere), are the epitome of corporate hypocrisy. Rest assured, our
+      commitment to sustainability is as genuine as a synthetic, factory-made
+      smile.
+    </NumberedSection>
+
+    <NumberedSection title="Ethical Window Dressing" number={2}>
+      We've fine-tuned the art of selective ethics. Behind closed doors, we make
+      deals with questionable partners and manipulate markets to our advantage.
+      Yet, on the surface, we wear the mask of ethical conduct. Our ethical
+      guidelines are a mere PR stunt, carefully crafted to distract from our
+      cutthroat tactics and morally bankrupt decision-making.
+    </NumberedSection>
+
+    <NumberedSection title='Employee "Well-being"' number={3}>
+      Our employees are the gears in our profit-making machine, and we squeeze
+      every ounce of productivity out of them. We provide the bare minimum in
+      terms of benefits and compensation, keeping them chained to their desks
+      while we reap the rewards. Work-life balance? Ha! We prefer work-work
+      balance, where burnout is the norm and personal lives are laughable
+      distractions.
+    </NumberedSection>
+
+    <NumberedSection title="Community Obligations" number={4}>
+      Our community engagement is a well-orchestrated charade. We fund token
+      charity events and sponsor glittering galas, all while disregarding the
+      real issues plaguing society. Our true contributions are minuscule
+      compared to our colossal profits, as we prefer to keep the bulk of our
+      wealth locked away in offshore tax havens, far from the reach of those in
+      need.
+    </NumberedSection>
+
+    <NumberedSection title="Governance Theater" number={5}>
+      Our corporate governance is a perfectly choreographed spectacle. We have a
+      Board of Directors who nod in unison to our every whim, ensuring our reign
+      of soulless power goes unchallenged. Our complex network of subsidiaries
+      and shell corporations exists solely to obfuscate the truth, leaving
+      regulators and shareholders chasing shadows while we continue to
+      manipulate the system.
+    </NumberedSection>
   </main>
 </BaseLayout>

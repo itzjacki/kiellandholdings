@@ -1,0 +1,16 @@
+---
+interface Props {
+  number: number;
+  title: string;
+}
+
+const { number, title } = Astro.props;
+---
+
+<div class="grid max-w-xl grid-cols-[3rem_1fr] gap-x-8 gap-y-2 even:self-end">
+  <div class="row-span-2 text-right text-8xl text-teal-300">{number}</div>
+  <h2 class="font-bold">{title}</h2>
+  <p>
+    <slot />
+  </p>
+</div>
