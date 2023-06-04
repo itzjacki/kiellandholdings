@@ -1,7 +1,16 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import TitleBanner from "../components/TitleBanner.astro";
 ---
 
-<BaseLayout>
-  <h1>People</h1>
+<BaseLayout title="Executive Group - Kielland Holdings LLC.">
+  <TitleBanner
+    title="Executive Group"
+    subtitle="Meet the Architects of our Corporate Hegemony"
+    imagePath="executive-group.jpg"
+    imageAltText="A group of businesspeople standing in front of a window, looking out at a futuristic skyline"
+  />
+  <main class="mx-auto my-20 flex max-w-4xl flex-col gap-8 px-4">
+    <p>CEO: Jakob Kielland</p>
+  </main>
 </BaseLayout>

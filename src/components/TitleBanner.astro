@@ -1,0 +1,32 @@
+---
+interface Props {
+  title: string;
+  imagePath: string;
+  imageAltText: string;
+  subtitle?: string;
+}
+
+const { title, imagePath, imageAltText, subtitle } = Astro.props;
+---
+
+<div class="px-8 md:hidden">
+  <h1 class="mb-4 mt-10 text-center text-4xl font-medium">{title}</h1>
+  <h2 class="text-center text-lg text-teal-300">
+    {subtitle}
+  </h2>
+</div>
+<div
+  class="mb-4 mt-16 flex h-fit items-center justify-center gap-[15%] bg-sky-900 px-12 md:mb-24 md:mt-40"
+>
+  <div class="hidden md:block">
+    <h1 class="text-5xl font-medium">{title}</h1>
+    <h2 class="text-lg text-teal-300">
+      {subtitle}
+    </h2>
+  </div>
+  <img
+    class="-my-10 max-h-[40vh] md:-my-20 md:max-h-[60vh]"
+    src={imagePath}
+    alt={imageAltText}
+  />
+</div>

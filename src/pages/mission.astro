@@ -1,29 +1,15 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import TitleBanner from "../components/TitleBanner.astro";
 ---
 
 <BaseLayout title="Our Mission - Kielland Holdings LLC.">
-  <div class="px-8 md:hidden">
-    <h1 class="mb-4 mt-10 text-center text-4xl font-medium">Our Mission</h1>
-    <h2 class="text-center text-lg text-teal-300">
-      Unleashing Unbridled Ambition in the Pursuit of Market Domination
-    </h2>
-  </div>
-  <div
-    class="mb-4 mt-16 flex h-fit items-center justify-center gap-[15%] bg-sky-900 px-12 md:mb-24 md:mt-40"
-  >
-    <div class="hidden md:block">
-      <h1 class="text-5xl font-medium">Our Mission</h1>
-      <h2 class="text-lg text-teal-300">
-        Unleashing Unbridled Ambition in the Pursuit of Market Domination
-      </h2>
-    </div>
-    <img
-      class="-my-10 max-h-[40vh] md:-my-20 md:max-h-[60vh]"
-      src="mission-skyscraper.jpg"
-      alt="A modern glass skyscraper surrounded by other tall buildings"
-    />
-  </div>
+  <TitleBanner
+    title="Our Mission"
+    subtitle="Unleashing Unbridled Ambition in the Pursuit of Market Dominance"
+    imagePath="mission-skyscraper.jpg"
+    imageAltText="A modern glass skyscraper surrounded by other tall buildings"
+  />
   <main class="mx-auto my-20 flex max-w-4xl flex-col gap-8 px-4">
     <p>
       Our mission is to unleash unbridled ambition and establish unrivaled
