@@ -1,11 +1,21 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/Header.astro";
+import Icon from "astro-icon";
 ---
 
+<script>
+  const scrollDownButton = document.getElementById("scrollDownButton");
+  const distanceToScroll =
+    scrollDownButton?.getBoundingClientRect().bottom ?? 1000;
+
+  scrollDownButton?.addEventListener("click", () => {
+    scrollBy(0, distanceToScroll);
+  });
+</script>
 <BaseLayout noHeader>
   <section
-    class="aspect-[1.5] h-screen max-h-[100rem] bg-hero-main bg-cover bg-center"
+    class="flex aspect-[1.5] h-screen max-h-[100rem] flex-col bg-hero-main bg-cover bg-center"
   >
     <Header />
     <div class="mx-4 mt-4 md:ml-[18vw] md:mt-[12vh] md:max-w-[25rem]">
@@ -19,6 +29,11 @@ import Header from "../components/Header.astro";
       </p>
     </div>
     <div class="flex-grow"></div>
+    <Icon
+      id="scrollDownButton"
+      name="ph:caret-down"
+      class="fadeInBottom animationDelay2000 mb-8 w-16 cursor-pointer self-center rounded-full bg-slate-900 hover:bg-slate-800"
+    />
   </section>
   <section
     class="mx-4 my-20 flex flex-wrap justify-center gap-12 md:px-20 [&>*]:max-w-sm"
