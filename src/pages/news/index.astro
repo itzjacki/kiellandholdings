@@ -1,0 +1,37 @@
+---
+import TitleBanner from "../../components/TitleBanner.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+
+const news = await getCollection("news");
+---
+
+<BaseLayout>
+  <TitleBanner
+    title="News"
+    imagePath="mission-skyscraper.jpg"
+    imageAltText="A modern glass skyscraper surrounded by other tall buildings"
+  />
+  <main class="m-auto mb-20 mt-12 flex w-full flex-col items-center gap-8">
+    {
+      news.map((entry) => (
+        <a
+          href={`/news/${entry.slug}`}
+          class="flex w-full max-w-4xl bg-slate-950 p-4 hover:bg-sky-900"
+        >
+          <img
+            class="aspect-square w-32 object-cover md:w-44"
+            src={entry.data.image.src}
+            alt={entry.data.image.alt}
+          />
+          <div class="ml-8">
+            <h2 class="text-2xl">{entry.data.title}</h2>
+            <div class="mt-2 text-slate-400">
+              {entry.data.date.toLocaleDateString()}
+            </div>
+          </div>
+        </a>
+      ))
+    }
+  </main>
+</BaseLayout>
