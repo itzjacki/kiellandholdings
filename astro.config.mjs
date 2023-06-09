@@ -12,5 +12,5 @@ export default defineConfig({
   ],
   output: "static",
   adapter: vercelStatic(),
-  site: "kiellandholdings.com",
+  site: "https://kiellandholdings.com",
 });
