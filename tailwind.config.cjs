@@ -4,9 +4,9 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'hero-main': "url('/hero-main.jpg')",
-      }
+        "hero-main": "url('/hero-main.jpg')",
+      },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };
